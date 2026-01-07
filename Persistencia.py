@@ -6,25 +6,21 @@ def salvar_score(nome, pontos):
 def ler_ranking():
     ranking = []
     try:
-        arquivo = open("ranking.txt")
-        conteudo = arquivo.readlines()
-        arquivo.close()
-
-        for linha in conteudo:
-            nome, pontos = linha.strip().split(',')
-            ranking.append((nome,int(pontos)))
-        return ranking
-    
+        with open("ranking.txt", "r", encoding="utf-8") as arquivo:
+            for linha in arquivo:
+                nome, pontos = linha.strip().split(",")
+                ranking.append((nome, int(pontos)))
     except FileNotFoundError:
-        pass
-
+        return []
+    return ranking
+    
 def mostrar_ranking_formatado():
     ranking = ler_ranking()
     if not ranking:
         print("\n==== Ranking Vazio ====")
         return
 
-    ranking.sort(key=lambda x: x[1])
+    ranking.sort(key=lambda item: item[1])
     posicao = 1
 
     print('\n==== Melhores Pontações ====\n'
@@ -32,3 +28,4 @@ def mostrar_ranking_formatado():
     for nome, pontos in ranking:
         print(f'{posicao:<3}{nome:<12}{pontos}')
         posicao += 1
+
