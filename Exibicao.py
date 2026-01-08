@@ -31,3 +31,22 @@ def criar_tabuleiro_visual(linhas, colunas):
             linha.append("\u25A0")
         tab_visual.append(linha)
     return tab_visual
+
+
+def mostrar_tabuleiro(tab_visual):
+    linhas = len(tab_visual)
+    colunas = len(tab_visual[0])
+    letras = string.ascii_uppercase
+
+    # Formatando linha de cabeçalho:
+    print('\n     ',end='')
+    for coluna in range(1, colunas + 1):
+        print(coluna, end=" ")
+    print()
+
+    # Aparência do tabuleiro
+    for i in range(linhas):
+        print(f"{letras[i]} |  ", end="")
+        for j in range(colunas):
+            print(tab_visual[i][j], end=" ")
+        print()
