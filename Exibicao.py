@@ -22,3 +22,12 @@ Como jogar:
 
 Boa sorte, comandante!
 """)
+
+def criar_tabuleiro_visual(linhas, colunas):
+    tab_visual = []
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append("\u25A0")
+        tab_visual.append(linha)
+    return tab_visual
