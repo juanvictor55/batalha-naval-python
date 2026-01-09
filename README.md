@@ -25,3 +25,7 @@ Implementar modo contra o computador
 Melhorar verificação de posições inválidas
 
 Módulo Tabuleiro foi criado pela faculdade, sendo todos os direitos a eles
+
+
+Corrigir leitura do ranking
+
