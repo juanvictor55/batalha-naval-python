@@ -1,6 +1,6 @@
 def salvar_score(nome, pontos):
     with open("ranking.txt", "a", encoding="utf-8") as arquivo:
-        arquivo.write(f"{nome},{pontos}\n")
+        arquivo.write(f"\n{nome},{pontos}")
 
 def ler_ranking():
     ranking = []
@@ -25,3 +25,4 @@ def mostrar_ranking_formatado():
           '   Nome    # Jogadas')
     for posicao, (nome, pontos) in enumerate(ranking[:10], start=1):
         print(f"{posicao:<3}{nome:<12}{pontos}")
+
