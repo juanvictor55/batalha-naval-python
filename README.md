@@ -9,23 +9,17 @@ O jogo permite que um jogador afunde todos os navios.
 
 ## 🎮 Como jogar
 1. Clone o repositório:
-
+2 no arquivo main.py ja esta o import frontend e chamando a função menu principal, entao é só dar play
 📸 Capturas de tela
 
 💡 Funcionalidades
 
 Posicionar navios manualmente ou automaticamente
-Turnos alternados entre os jogadores
-Contagem de acertos e derrotas
+Contagem de jogadas
 
 📌 Próximos passos / melhorias
-Adicionar interface gráfica
-Implementar modo contra o computador
-
-Melhorar verificação de posições inválidas
 
 Módulo Tabuleiro foi criado pela faculdade, sendo todos os direitos a eles
-
 
 Corrigir leitura do ranking
 
