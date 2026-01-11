@@ -1,5 +1,43 @@
 import string
 
+def criar_tabuleiro_visual(linhas, colunas):
+    tab_visual = []
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append("\u25A0")
+        tab_visual.append(linha)
+    return tab_visual
+
+def mostrar_tabuleiro(tab_visual):
+    linhas = len(tab_visual)
+    colunas = len(tab_visual[0])
+    letras = string.ascii_uppercase
+
+    # Formatando linha de cabeçalho:
+    print('\n     ',end='')
+    for coluna in range(1, colunas + 1):
+        print(coluna, end=" ")
+    print()
+
+    # Aparência do tabuleiro
+    for i in range(linhas):
+        print(f"{letras[i]} |  ", end="")
+        for j in range(colunas):
+            print(tab_visual[i][j], end=" ")
+        print()
+
+
+def mensagem_menu():
+    print("""
+╔════════════════════════════════════════════╗
+║        BEM-VINDO AO BATALHA NAVAL!         ║
+╚════════════════════════════════════════════╝
+
+1 - Jogar
+2 - Ver Melhores Pontuações
+3 - Sair""")
+
 def exibir_instrucoes_jogo():
     print("""
 ╔════════════════════════════════════════════╗
@@ -23,30 +61,27 @@ Como jogar:
 Boa sorte, comandante!
 """)
 
-def criar_tabuleiro_visual(linhas, colunas):
-    tab_visual = []
-    for i in range(linhas):
-        linha = []
-        for j in range(colunas):
-            linha.append("\u25A0")
-        tab_visual.append(linha)
-    return tab_visual
+def msg_posicao_repetida():
+    print('''
+╔══════════════════════════════╗
+║  Posição repetida!           ║
+║  Escolha outro alvo.         ║
+╚══════════════════════════════╝''')
 
+def msg_agua():
+    print('''
+╔══════════════════════════════╗
+║   ÁGUA!!!!                   ║
+╚══════════════════════════════╝''')
 
-def mostrar_tabuleiro(tab_visual):
-    linhas = len(tab_visual)
-    colunas = len(tab_visual[0])
-    letras = string.ascii_uppercase
+def msg_acerto():
+    print('''
+╔══════════════════════════════╗
+║   Acertou uma embarcação!    ║
+╚══════════════════════════════╝''')
 
-    # Formatando linha de cabeçalho:
-    print('\n     ',end='')
-    for coluna in range(1, colunas + 1):
-        print(coluna, end=" ")
-    print()
-
-    # Aparência do tabuleiro
-    for i in range(linhas):
-        print(f"{letras[i]} |  ", end="")
-        for j in range(colunas):
-            print(tab_visual[i][j], end=" ")
-        print()
+def msg_formato_invalido():
+    print('''
+╔══════════════════════════════╗
+║  Formato inválido            ║
+╚══════════════════════════════╝''')
