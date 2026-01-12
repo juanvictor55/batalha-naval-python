@@ -94,17 +94,21 @@ Arquivo principal do jogo, onde:
 - Menu interativo
 - Separação entre lógica do jogo e exibição visual
 
-📸 Capturas de tela
+---
+
+## 📸 Capturas de tela
 
 (A ser adicionado)
 
-📚 Créditos
+---
+
+## 📚 Créditos
 
 - Módulo Tabuleiro desenvolvido e fornecido pela faculdade
 - Demais módulos e integração desenvolvidos por mim como parte do projeto acadêmico
 
-📌 Próximos passos / melhorias
+---
 
-
+## 📌 Próximos passos / melhorias
 
 Corrigir leitura do ranking
