@@ -106,9 +106,3 @@ Arquivo principal do jogo, onde:
 
 - Módulo Tabuleiro desenvolvido e fornecido pela faculdade
 - Demais módulos e integração desenvolvidos por mim como parte do projeto acadêmico
-
----
-
-## 📌 Próximos passos / melhorias
-
-Corrigir leitura do ranking
