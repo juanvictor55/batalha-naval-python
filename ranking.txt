@@ -2,5 +2,4 @@ Alice,20
 Bob,25
 Alberto,30
 Cesar,26
-Maria,31
-Thiago,33
+Joana,35
